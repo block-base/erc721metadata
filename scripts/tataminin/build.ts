@@ -10,8 +10,9 @@ interface Metadata {
 }
 
 const count = 100;
-const OUTPUT_PATH_BASE = "./public/v1/tataminin/";
+const OUTPUT_PATH_BASE = "./public/tataminin/";
 
+const metadatas: Metadata[] = [];
 for (let i = 1; i <= count; i++) {
   const metadata: Metadata = {
     ...template,
@@ -19,4 +20,7 @@ for (let i = 1; i <= count; i++) {
     name: `${template.name} #${i}`,
   };
   fs.writeFileSync(`${OUTPUT_PATH_BASE}${i}.json`, JSON.stringify(metadata));
+  metadatas.push(metadata);
 }
+
+fs.writeFileSync(`${OUTPUT_PATH_BASE}.json`, JSON.stringify(metadatas));

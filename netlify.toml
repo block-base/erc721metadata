@@ -3,7 +3,7 @@
   command = "yarn && yarn build"
 
 [[redirects]]
-  from = "/v1"
+  from = "/assets"
   to = "/v1/:content_id/:unique_id.json"
   query = {content_id = ":content_id", unique_id = ":unique_id"}
   status = 200
