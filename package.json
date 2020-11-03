@@ -1,0 +1,20 @@
+{
+  "name": "resource.erc721metadata",
+  "version": "0.0.1",
+  "description": "resource.erc721metadata",
+  "author": "ookimaki",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore --write .",
+    "build": "run-p build:*",
+    "build:tataminin": "ts-node scripts/tataminin/build.ts",
+    "postbuild": "yarn format"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}

@@ -1,0 +1,9 @@
+[build]
+  publish = "public/"
+  command = "yarn install && yarn run build"
+
+[[redirects]]
+  from = "/tataminin/"
+  to = "/db.json"
+  status = 200
+  force = true
