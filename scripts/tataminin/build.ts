@@ -10,7 +10,7 @@ interface Metadata {
 }
 
 const count = 100;
-const OUTPUT_PATH_BASE = "./public/tataminin/";
+const OUTPUT_PATH_BASE = "./public/api/tataminin/";
 
 for (let i = 1; i <= count; i++) {
   const metadata: Metadata = {

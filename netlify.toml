@@ -1,9 +1,9 @@
 [build]
   publish = "public/"
-  command = "yarn install && yarn run build"
+  command = "yarn && yarn build"
 
 [[redirects]]
-  from = "/tataminin/"
-  to = "/db.json"
+  from = "/api/:token/*"
+  to = "/api/:token/:splat.json"
   status = 200
   force = true
