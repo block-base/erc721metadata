@@ -3,8 +3,8 @@
   command = "yarn && yarn build"
 
 [[redirects]]
-  from = "/"
-  to = "/api/:token/:id.json"
+  from = "/v1"
+  to = "/v1/:token/:id.json"
   query = {token = ":token", id = ":id"}
   status = 200
   force = true
