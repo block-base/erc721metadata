@@ -4,7 +4,18 @@
 
 [[redirects]]
   from = "/assets"
-  to = "/:content_id/:unique_id.json"
-  query = {content_id = ":content_id", unique_id = ":unique_id"}
+  to = "/contents/assets.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/assets/tataminin"
+  to = "/contents/tataminin/assets.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/assets/tataminin/:unique_id"
+  to = "/contents/tataminin/:unique_id.json"
   status = 200
   force = true

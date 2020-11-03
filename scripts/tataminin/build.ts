@@ -1,16 +1,9 @@
 import * as fs from "fs";
 import template from "./template.json";
-
-interface Metadata {
-  id: string;
-  name: string;
-  description: string;
-  external_url: string;
-  image: string;
-}
+import { Metadata } from "../types";
 
 const count = 100;
-const OUTPUT_PATH_BASE = "./public/tataminin/";
+const OUTPUT_PATH_BASE = "./public/contents/tataminin/";
 
 const metadatas: Metadata[] = [];
 for (let i = 1; i <= count; i++) {
@@ -23,4 +16,4 @@ for (let i = 1; i <= count; i++) {
   metadatas.push(metadata);
 }
 
-fs.writeFileSync(`${OUTPUT_PATH_BASE}.json`, JSON.stringify(metadatas));
+fs.writeFileSync(`${OUTPUT_PATH_BASE}assets.json`, JSON.stringify(metadatas));
