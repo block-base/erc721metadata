@@ -8,15 +8,21 @@ schemes:
 paths:
   /assets:
     get:
-      summary: "Assets"
-      description: "Get Assets Metadata"
-      parameters:
-        - in: "query"
-          type: "string"
-          name: "content_id"
-        - in: "query"
-          type: "string"
-          name: "unique_id"
+      summary: "assets"
+      responses:
+        "200":
+          description: "Secucess"
+          schema:
+            type: "object"
+            properties:
+              [asset_id]:
+                schema:
+                type: "array"
+                items:
+                  $ref: "#/definitions/Metadata"
+  /assets/{asset_id}/:
+    get:
+      summary: "assets/{asset_id}"
       responses:
         "200":
           description: "Secucess"
@@ -24,6 +30,14 @@ paths:
             type: "array"
             items:
               $ref: "#/definitions/Metadata"
+  /assets/{asset_id}/{unique_Id}:
+    get:
+      summary: "assets/{asset_id}/{unique_Id}"
+      responses:
+        "200":
+          description: "Secucess"
+          schema:
+            $ref: "#/definitions/Metadata"
 definitions:
   Metadata:
     type: "object"
