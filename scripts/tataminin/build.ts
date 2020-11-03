@@ -1,8 +1,8 @@
 import * as fs from "fs";
-// import * as path from "path";
 import template from "./template.json";
 
 interface Metadata {
+  id: string;
   name: string;
   description: string;
   external_url: string;
