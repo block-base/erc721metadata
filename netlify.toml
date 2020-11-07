@@ -3,6 +3,18 @@
   command = "yarn && yarn build"
 
 [[redirects]]
+  from = "/faucet"
+  to = "https://rinkeby.etherscan.io/dapp/0x642403999CEa5F888504274b0F37f61586C7E6c2#writeContract"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/assets/faucet/:unique_id"
+  to = "/contents/faucet/template.json"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/assets"
   to = "/contents/assets.json"
   status = 200
