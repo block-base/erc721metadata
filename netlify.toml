@@ -3,31 +3,31 @@
   command = "yarn && yarn build"
 
 [[redirects]]
-  from = "/faucet"
-  to = "https://rinkeby.etherscan.io/dapp/0x642403999CEa5F888504274b0F37f61586C7E6c2#writeContract"
+  from = "/faucet/rinkeby"
+  to = "https://rinkeby.etherscan.io/dapp/0x41F2AD9634A8d44c1D00cFED4Ce319eAd6768c16#writeContract"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/metadata/contents/mock/:unique_id"
+  to = "/metadata/contents/mock/template.json"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/assets/faucet/:unique_id"
-  to = "/contents/faucet/template.json"
+  from = "/metadata/contents"
+  to = "/metadata/contents/assets.json"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/assets"
-  to = "/contents/assets.json"
+  from = "/metadata/contents/tataminin"
+  to = "/metadata/contents/tataminin/assets.json"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/assets/tataminin"
-  to = "/contents/tataminin/assets.json"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/assets/tataminin/:unique_id"
-  to = "/contents/tataminin/:unique_id.json"
+  from = "/metadata/contents/tataminin/:unique_id"
+  to = "/metadata/contents/tataminin/:unique_id.json"
   status = 200
   force = true

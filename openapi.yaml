@@ -2,27 +2,27 @@ swagger: "2.0"
 info:
   version: "1.0.0"
   title: "ERC721 Metadata API Speficication"
-host: "erc721.netlify.app"
+host: "erc721.netlify.app/metadata"
 schemes:
   - "https"
 paths:
-  /assets:
+  /contents:
     get:
-      summary: "assets"
+      summary: "contents"
       responses:
         "200":
           description: "Secucess"
           schema:
             type: "object"
             properties:
-              [asset_id]:
+              [content_id]:
                 schema:
                 type: "array"
                 items:
                   $ref: "#/definitions/Metadata"
-  /assets/{asset_id}/:
+  /contents/{content_id}/:
     get:
-      summary: "assets/{asset_id}"
+      summary: "contents/{content_id}"
       responses:
         "200":
           description: "Secucess"
@@ -30,9 +30,9 @@ paths:
             type: "array"
             items:
               $ref: "#/definitions/Metadata"
-  /assets/{asset_id}/{unique_Id}:
+  /contents/{content_id}/{unique_Id}:
     get:
-      summary: "assets/{asset_id}/{unique_Id}"
+      summary: "contents/{content_id}/{unique_Id}"
       responses:
         "200":
           description: "Secucess"

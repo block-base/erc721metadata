@@ -8,7 +8,7 @@
     "format": "prettier --ignore-path .gitignore --write .",
     "build": "run-p build:*",
     "build:tataminin": "ts-node scripts/tataminin/build.ts",
-    "postbuild": "ts-node scripts/build.ts && yarn format && yarn redoc-cli bundle openapi.yaml --output ./public/index.html"
+    "postbuild": "ts-node scripts/build.ts && yarn format && yarn redoc-cli bundle openapi.yaml --output ./public/metadata/index.html"
   },
   "devDependencies": {
     "@types/node": "^14.14.6",
