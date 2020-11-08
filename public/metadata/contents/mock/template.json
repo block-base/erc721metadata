@@ -2,5 +2,5 @@
   "name": "ERC721 Mock Token",
   "description": "This is Mock Token",
   "external_url": "https://erc721.netlify.app/faucet",
-  "image": "https://erc721.netlify.app/images/faucet_metadata.png"
+  "image": "https://erc721.netlify.app/images/mock_metadata.png"
 }
